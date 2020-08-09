@@ -5,23 +5,27 @@
       <form>
         <div class="form-group">
           <label>Nombre:</label>
-          <input class="form-control" id="inputName" />
+          <input v-model="name" class="form-control" id="inputName" />
         </div>
         <div class="form-group">
           <label>Ciudad:</label>
-          <input class="form-control" id="inputCity" />
+          <input v-model="city" class="form-control" id="inputCity" />
         </div>
         <form>
           <div class="form-group">
             <label>Agregar foto:</label>
             <div class="row">
               <div class="mx-auto">
-                <input type="file" class="form-control-file" id="inputPhoto" />
+                <input type="file" class="form-control-file" id="inputPhoto" ref="file" />
               </div>
             </div>
           </div>
         </form>
-        <button type="btnRegisterPerson" class="btn btn-outline-success">Registrarse</button>
+        <button
+          v-on:click="sendData"
+          type="btnRegisterPerson"
+          class="btn btn-outline-success"
+        >Registrar contagio</button>
       </form>
     </div>
   </div>
@@ -32,6 +36,36 @@ export default {
   name: "RegisterForm",
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      name: "",
+      city: "",
+      file: "",
+    };
+  },
+  methods: {
+    sendData: function () {
+      console.log(new Date());
+      var formData = new FormData();
+      formData.set('name', this.name)
+      formData.set('city', this.city)
+      formData.set('date_contagion', new Date().toDateString());
+      var file = this.$refs.file.files[0];
+      formData.append("image", file);
+      axios({
+        method: "post",
+        url: "http://localhost:3000/contagions/add",
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (response) {
+          console.log(response.data);
+        });
+    },
   },
 };
 </script>

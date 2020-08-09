@@ -1,7 +1,6 @@
 <template>
   <div class="list">
       <ListInfected msg="Lista"/>
-      <h1>sadsfdgdsfdgfhgf</h1>
   </div>
 </template>
 

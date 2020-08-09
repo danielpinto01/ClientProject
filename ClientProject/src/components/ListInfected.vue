@@ -1,8 +1,6 @@
 <template>
   <div class="listInfected">
     <h1>{{ msg }}</h1>
-    <h1>sadsfdgf</h1>
-
     <table class="table table-dark">
       <thead>
         <tr>
@@ -33,7 +31,8 @@
 export default {
   name: "ListInfected",
   props: {
-    msg: String,
+    msg: String
+,
   },
 };
 </script>
