@@ -31,16 +31,6 @@ export default {
   created: function () {
     this.requestData();
   }, 
-  mounted: function () {
-    this.chart = new Chart(this.$refs.myChart, {
-      type: 'line',
-      data: {
-        labels: this.labels,
-        datasets: this.datasets
-      },
-      options: this.options
-    });
-  },
   methods: {
     requestData: function () {
       this.labels = [];
