@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import "chart.js";
+import "hchs-vue-charts";
+Vue.use(window.VueCharts);
+
+
 Vue.config.productionTip = false
 
 new Vue({

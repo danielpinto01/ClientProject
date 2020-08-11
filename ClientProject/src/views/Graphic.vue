@@ -1,6 +1,7 @@
 <template>
   <div class="graphic">
-      <GraphicList msg="Grafico"/>
+      <!-- <GraphicList msg="Grafico"/> -->
+      <GraphicList />
   </div>
 </template>
 
@@ -15,5 +16,6 @@ export default {
 }
 </script>
 
-<style scoped>
+
+<style >
 </style>

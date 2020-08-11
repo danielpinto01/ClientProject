@@ -29,10 +29,10 @@
   <div class="container">
     <h1>Lista de contagios</h1>
     <iframe
-          src="https://docs.google.com/viewer?srcid=1H0eMUfBH-mewGDnAvkX-I1m1DC65SNqZ&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
-          width="50%"
-          height="550px"
-        ></iframe>
+      src="https://docs.google.com/viewer?srcid=1H0eMUfBH-mewGDnAvkX-I1m1DC65SNqZ&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+      width="50%"
+      height="550px"
+    ></iframe>
     <div class="row">
       <div class="mx-auto">
         <button type="btnPDFList" class="btn btn-outline-success">Print PDF</button>
