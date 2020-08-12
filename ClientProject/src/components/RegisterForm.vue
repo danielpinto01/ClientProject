@@ -42,15 +42,16 @@ export default {
       name: "",
       city: "",
       file: "",
+      showAlert: false,
     };
   },
   methods: {
     sendData: function () {
       console.log(new Date());
       var formData = new FormData();
-      formData.set('name', this.name)
-      formData.set('city', this.city)
-      formData.set('date_contagion', new Date().toDateString());
+      formData.set("name", this.name);
+      formData.set("city", this.city);
+      formData.set("date_contagion", new Date().toDateString());
       var file = this.$refs.file.files[0];
       formData.append("image", file);
       axios({
@@ -61,9 +62,11 @@ export default {
       })
         .then(function (response) {
           console.log(response.data);
+          alert('Agregado correctamente')
         })
         .catch(function (response) {
           console.log(response.data);
+          alert('FALLO: ' + response.mesage)
         });
     },
   },
