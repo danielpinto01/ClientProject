@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="graphicList">
-      <h1>graphic</h1>
+      <h1>Casos por ciudad</h1>
       <!--chartjs-bar v-bind:labels="labels" v-bind:datasets="datasets" v-bind:option="option"></chartjs-bar-->
       <chartjs-doughnut v-bind:labels="labels"  v-bind:datasets="datasets" v-bind:option="option" :options="{responsive: true, maintainAspectRatio: false}"></chartjs-doughnut>
     </div>

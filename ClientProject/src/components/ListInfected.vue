@@ -1,19 +1,17 @@
 <template>
   <div class="container">
     <h1>Reporte de contagios</h1>
-    <div class="row" style="align-items:center">
-    <button
-      v-on:click="requestPDFLink"
-      type="btnRegisterPerson"
-      class="btn btn-outline-success"
-    >Actualizar Reporte</button>
-    </div>
-    <iframe v-bind:src="pdfSrc" width="50%" height="550px"></iframe>
+
     <div class="row">
       <div class="mx-auto">
-        <button type="btnPDFList" class="btn btn-outline-success">Print PDF</button>
+        <button 
+          v-on:click="requestPDFLink"
+          type="btnRegisterPerson"
+          class="btn btn-outline-success"
+        >Actualizar Reporte</button>
       </div>
     </div>
+    <iframe style="margin-top:10px;" v-bind:src="pdfSrc" width="50%" height="550px"></iframe>
   </div>
 </template>
 
