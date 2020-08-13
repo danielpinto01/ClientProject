@@ -56,7 +56,7 @@ export default {
       formData.append("image", file);
       axios({
         method: "post",
-        url: "http://172.20.0.2:80/contagions/add",
+        url: "http://172.20.0.2/contagions/add",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
         crossDomain: true
