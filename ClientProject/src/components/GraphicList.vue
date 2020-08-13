@@ -36,7 +36,7 @@ export default {
       this.labels = [];
       this.datasets[0].data = [];
       this.datasets[0].backgroundColor = [];
-      axios({ method: "get", url: "http://localhost:3000/reports/contagionsByCity" })
+      axios({ method: "get", url: "http://172.20.0.2/reports/contagionsByCity" })
         .then((response) => {
           response.data.forEach((element) => {
             this.addElement(element);

@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     requestPDFLink: function () {
-      axios({ method: "get", url: "http://localhost:3000/reports/generatePDF" })
+      axios({ method: "get", url: "http://172.20.0.2/reports/generatePDF" })
         .then((response) => {
           this.pdfSrc = "http://" + response.data;
           console.log(this.pdfSrc);
